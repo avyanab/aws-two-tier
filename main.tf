@@ -186,7 +186,7 @@ resource "aws_autoscaling_group" "tf-tt-asg" {
   desired_capacity    = 2
   max_size            = 3
   min_size            = 2
-  vpc_zone_identifier = [var.us-aze1a, var.us-aze1b]
+  vpc_zone_identifier = [aws_subnet.tt-pubsubnet-1.id, aws_subnet.tt-pubsubnet-2.id]
 
   launch_template {
     id = aws_launch_template.tf-tt-launch.id
