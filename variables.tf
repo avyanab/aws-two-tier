@@ -40,11 +40,13 @@ variable "us-aze1b" {
 variable "db_username" {
   description = "Database administrator username"
   type        = string
+  default     = "dbadmin"
   sensitive   = true
 }
 
 variable "db_password" {
   description = "Database administrator password"
   type        = string
+  default     = "mydbpassword"
   sensitive   = true
 }
