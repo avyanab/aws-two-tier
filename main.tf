@@ -176,7 +176,7 @@ resource "aws_launch_template" "tf-tt-launch" {
   name                   = "tf-tt-launch"
   image_id               = var.ami_id
   instance_type          = var.instance_type
-  key_name               = "luitproject"
+  key_name               = "keypair_name"
   vpc_security_group_ids = [aws_security_group.tf-tt-sg.id]
 
   tag_specifications {
